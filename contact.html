@@ -1,54 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact</title>
+  <title>Contact - Huize Rehorst</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Contact Us</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">HUIZE REHORST</div>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+
+      <a class="cta-btn" href="contact.html">Plan een gesprek</a>
+    </div>
   </header>
 
-  <main>
-    <h2>Send us a message</h2>
+  <!-- Page hero -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <h1>Contact</h1>
+      <p>Stuur ons een bericht — we reageren zo snel mogelijk.</p>
+    </div>
+  </section>
 
-    <!-- Netlify form -->
-    <form name="contact" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="contact" />
+  <main class="container">
 
-      <label>
-        Name:
-        <input type="text" name="name" required />
-      </label>
+    <section class="section">
+      <div class="contact-grid">
 
-      <label>
-        Email:
-        <input type="email" name="email" required />
-      </label>
+        <!-- Contact info -->
+        <div class="card contact-info">
+          <h2>Contactgegevens</h2>
+          <p>Je kunt ons bereiken via het formulier of via onderstaande gegevens.</p>
 
-      <label>
-        Subject:
-        <input type="text" name="subject" required />
-      </label>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> info@huizerehorst.nl</li>
+            <li><strong>Telefoon:</strong> +31 6 12345678</li>
+            <li><strong>Locatie:</strong> Nederland</li>
+          </ul>
 
-      <label>
-        Message:
-        <textarea name="message" rows="6" required></textarea>
-      </label>
+          <div class="contact-note">
+            <p><strong>Tip:</strong> Geef bij onderwerp kort aan waar het over gaat.</p>
+          </div>
+        </div>
 
-      <button type="submit">Send</button>
-    </form>
+        <!-- Form -->
+        <div class="card contact-form-card">
+          <h2>Stuur een bericht</h2>
+
+          <!-- Netlify Form -->
+          <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+
+            <label>
+              Naam
+              <input type="text" name="name" required />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+
+            <label>
+              Onderwerp
+              <input type="text" name="subject" required />
+            </label>
+
+            <label>
+              Bericht
+              <textarea name="message" rows="6" required></textarea>
+            </label>
+
+            <button class="btn btn-primary" type="submit">Verstuur</button>
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>© 2026 My Website</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Huize Rehorst</p>
+      <p class="footer-links">
+        <a href="about.html">About</a> · <a href="contact.html">Contact</a>
+      </p>
+    </div>
   </footer>
+
 </body>
 </html>
