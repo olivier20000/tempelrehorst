@@ -1,28 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Website</title>
+  <title>Huize Rehorst</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Website</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">HUIZE REHORST</div>
+
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a class="cta-btn" href="contact.html">Plan een gesprek</a>
+    </div>
   </header>
 
-  <main>
-    <h2>Home Page</h2>
-    <p>This is a basic website hosted using GitHub and Netlify.</p>
+  <!-- Hero (background image only here) -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <p class="hero-badge">Nieuw • Spirituele groei</p>
+      <h1>Ontdek een nieuwe spirituele grens.</h1>
+      <p class="hero-subtitle">
+        Een warme plek voor reflectie, rust en verdieping — met begeleiding die bij jou past.
+      </p>
+
+      <div class="hero-actions">
+        <a href="about.html" class="btn btn-primary">Meer informatie</a>
+        <a href="contact.html" class="btn btn-secondary">Contact opnemen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <main class="container">
+
+    <!-- Feature cards -->
+    <section class="section">
+      <h2 class="section-title">Wat wij bieden</h2>
+      <p class="section-lead">
+        Een moderne, rustige aanpak met respect voor traditie en persoonlijke groei.
+      </p>
+
+      <div class="grid-3">
+        <article class="card">
+          <h3>Begeleiding</h3>
+          <p>Persoonlijke begeleiding op jouw tempo, met focus op balans en richting.</p>
+        </article>
+
+        <article class="card">
+          <h3>Retreat & rust</h3>
+          <p>Ruimte om te ademen, los te laten en opnieuw verbinding te maken.</p>
+        </article>
+
+        <article class="card">
+          <h3>Inzicht</h3>
+          <p>Praktische inzichten die je helpen om sterker en helderder verder te gaan.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Highlight section -->
+    <section class="section highlight">
+      <div class="highlight-inner">
+        <div>
+          <h2>Een warme, krachtige stijl</h2>
+          <p>
+            Met een kleurenschema geïnspireerd op jouw voorbeeld: helder geel, diep rood en zachte warme tinten.
+          </p>
+        </div>
+        <a class="btn btn-primary" href="contact.html">Start vandaag</a>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>© 2026 My Website</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Huize Rehorst</p>
+      <p class="footer-links">
+        <a href="about.html">About</a> · <a href="contact.html">Contact</a>
+      </p>
+    </div>
   </footer>
+
 </body>
 </html>
