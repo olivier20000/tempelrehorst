@@ -385,3 +385,39 @@ form button{
   .cta-btn{ display:none; }
   .contact-grid{ grid-template-columns: 1fr; }
 }
+
+/* =========================
+   TUK TUK ANIMATION
+========================= */
+
+.tuktuk-wrap{
+  display: flex;
+  justify-content: center;
+  margin: 18px 0 0;
+}
+
+/* TukTuk image */
+.tuktuk{
+  position: fixed;
+  bottom: 20px;
+  left: -220px; /* start off screen */
+  width: 200px;
+  z-index: 9999;
+  pointer-events: none;
+  display: none;
+}
+
+/* animation class */
+.tuktuk.drive{
+  display: block;
+  animation: driveAcross 3.5s linear forwards;
+}
+
+@keyframes driveAcross{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(100vw + 500px));
+  }
+}
