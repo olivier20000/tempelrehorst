@@ -1,28 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us</title>
+  <title>About Us - Huize Rehorst</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>About Us</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">HUIZE REHORST</div>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a class="cta-btn" href="contact.html">Plan een gesprek</a>
+    </div>
   </header>
 
-  <main>
-    <h2>Who We Are</h2>
-    <p>Write your about-us content here.</p>
+  <!-- Simple hero banner (no image needed) -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <h1>About Us</h1>
+      <p>Wie wij zijn en waar we voor staan.</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <section class="section">
+      <h2 class="section-title">Onze missie</h2>
+      <p class="section-lead">
+        Bij Huize Rehorst geloven we in rust, reflectie en persoonlijke groei.
+        We begeleiden mensen die op zoek zijn naar meer balans en betekenis.
+      </p>
+
+      <div class="grid-3">
+        <article class="card">
+          <h3>Warmte</h3>
+          <p>Een veilige plek waar je jezelf kunt zijn.</p>
+        </article>
+
+        <article class="card">
+          <h3>Vertrouwen</h3>
+          <p>Discretie, respect en aandacht staan centraal.</p>
+        </article>
+
+        <article class="card">
+          <h3>Richting</h3>
+          <p>We helpen je helderheid te vinden en stappen te zetten.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section highlight">
+      <div class="highlight-inner">
+        <div>
+          <h2>Waarom Huize Rehorst?</h2>
+          <p>
+            Een moderne, rustige aanpak met een warme stijl — geïnspireerd op geel en rood.
+          </p>
+        </div>
+        <a class="btn btn-primary" href="contact.html">Neem contact op</a>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>© 2026 My Website</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Huize Rehorst</p>
+      <p class="footer-links">
+        <a href="about.html">About</a> · <a href="contact.html">Contact</a>
+      </p>
+    </div>
   </footer>
+
 </body>
 </html>
