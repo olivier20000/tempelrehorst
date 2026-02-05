@@ -203,19 +203,20 @@ form textarea:focus{
   border-top: 6px solid var(--yellow);
 }
 
-/* TUK TUK */
-#tuktuk{
+/* The class for the spawned vehicle */
+.tuktuk-racer {
   position: fixed;
   bottom: 20px;
-  left: -250px;
+  left: -250px;         /* Start off screen */
   width: 200px;
+  z-index: 9999;
+  pointer-events: none;
+  
+  /* Run animation immediately upon creation */
+  animation: driveAcross 4s linear forwards; 
 }
 
-#tuktuk.drive{
-  animation: driveAcross 4s linear forwards;
-}
-
-@keyframes driveAcross{
+@keyframes driveAcross {
   from { left: -250px; }
   to { left: 100vw; }
 }
