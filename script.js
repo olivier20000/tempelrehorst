@@ -1,16 +1,18 @@
-const btn = document.getElementById("tuktukBtn");
-const tuktuk = document.getElementById("tuktuk");
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("tuktukBtn");
+  const tuktuk = document.getElementById("tuktuk");
 
-if (btn && tuktuk) {
+  if (!btn || !tuktuk) return;
+
   btn.addEventListener("click", () => {
-    // restart animation
+    // reset position + animation
     tuktuk.classList.remove("drive");
-    void tuktuk.offsetWidth; // forces animation restart
+    tuktuk.style.left = "-250px";
+
+    // force browser reflow
+    void tuktuk.offsetWidth;
+
+    // start animation
     tuktuk.classList.add("drive");
   });
-
-  tuktuk.addEventListener("animationend", () => {
-    tuktuk.classList.remove("drive");
-    tuktuk.style.display = "none";
-  });
-}
+});
