@@ -1,115 +1,32 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - Huize Rehorst</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+<form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+>
+  <!-- Required hidden fields -->
+  <input type="hidden" name="form-name" value="contact" />
+  <input type="hidden" name="bot-field" />
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-<a class="logo" href="index.html">
-  <img src="logo.png" alt="Huize Rehorst logo" />
-  <span>HUIZE REHORST</span>
-</a>
+  <label>
+    Naam
+    <input type="text" name="name" required />
+  </label>
 
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html" class="active">Contact</a>
-      </nav>
+  <label>
+    Email
+    <input type="email" name="email" required />
+  </label>
 
-      <a class="cta-btn" href="contact.html">Plan een gesprek</a>
-    </div>
-  </header>
+  <label>
+    Onderwerp
+    <input type="text" name="subject" required />
+  </label>
 
-  <!-- Page hero -->
-  <section class="page-hero">
-    <div class="container page-hero-inner">
-      <h1>Contact</h1>
-      <p>Stuur ons een bericht — we reageren zo snel mogelijk.</p>
-    </div>
-  </section>
+  <label>
+    Bericht
+    <textarea name="message" rows="6" required></textarea>
+  </label>
 
-  <main class="container">
-
-    <section class="section">
-      <div class="contact-grid">
-
-
-        <div class="tuktuk-wrap">
-  <button class="btn btn-primary" id="tuktukBtn">tuk tuk</button>
-</div>
-
-<!-- TukTuk that will animate -->
-<img src="tuktuk.png" alt="Tuk Tuk" id="tuktuk" class="tuktuk" />
-
-        <!-- Contact info -->
-        <div class="card contact-info">
-          <h2>Contactgegevens</h2>
-          <p>Je kunt ons bereiken via het formulier of via onderstaande gegevens.</p>
-
-          <ul class="contact-list">
-            <li><strong>Email:</strong> el129629@leerling.eligant.nl</li>
-            <li><strong>Telefoon:</strong> +31 6 24448406</li>
-            <li><strong>Locatie:</strong> Nederland</li>
-          </ul>
-
-          <div class="contact-note">
-            <p><strong>Tip:</strong> Geef bij onderwerp kort aan waar het over gaat.</p>
-          </div>
-        </div>
-
-        <!-- Form -->
-        <div class="card contact-form-card">
-          <h2>Stuur een bericht</h2>
-
-          <!-- Netlify Form -->
-          <form name="contact" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="contact" />
-
-            <label>
-              Naam
-              <input type="text" name="name" required />
-            </label>
-
-            <label>
-              Email
-              <input type="email" name="email" required />
-            </label>
-
-            <label>
-              Onderwerp
-              <input type="text" name="subject" required />
-            </label>
-
-            <label>
-              Bericht
-              <textarea name="message" rows="6" required></textarea>
-            </label>
-
-            <button class="btn btn-primary" type="submit">Verstuur</button>
-          </form>
-
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2026 Huize Rehorst</p>
-      <p class="footer-links">
-        <a href="about.html">About</a> · <a href="contact.html">Contact</a>
-      </p>
-    </div>
-  </footer>
-
-</body>
-</html>
+  <button class="btn btn-primary" type="submit">Verstuur</button>
+</form>
