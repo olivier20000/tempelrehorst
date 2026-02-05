@@ -388,37 +388,28 @@ form button{
 }
 
 /* =========================
-   TUK TUK ANIMATION
+   TUK TUK ANIMATION (FIXED)
 ========================= */
 
-.tuktuk-wrap{
-  display: flex;
-  justify-content: center;
-  margin: 18px 0 0;
-}
-
-.tuktuk-wrap{
-  display: flex;
-  justify-content: center;
-  margin: 18px 0 0;
-}
-
-.tuktuk{
+#tuktuk{
   position: fixed;
   bottom: 20px;
-  left: -220px;
+  left: -250px;              /* start off screen */
   width: 200px;
   z-index: 9999;
   pointer-events: none;
-  display: none;
 }
 
-.tuktuk.drive{
-  display: block;
-  animation: driveAcross 3.5s linear forwards;
+/* when active */
+#tuktuk.drive{
+  animation: driveAcross 4s linear forwards;
 }
 
 @keyframes driveAcross{
-  0%{ transform: translateX(0); }
-  100%{ transform: translateX(calc(100vw + 500px)); }
+  from {
+    left: -250px;
+  }
+  to {
+    left: 100vw;
+  }
 }
